@@ -12,8 +12,11 @@ const EditItem = (props) => {
 
     useEffect(()=>{
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-    .then(response => {setUserId(response.data.id) ;setTitle(response.data.title);
-    setBody(response.data.body)})
+    .then(response => {
+        setUserId(response.data.userId);
+        setTitle(response.data.title);
+        setBody(response.data.body)
+    })
     .catch(error => console.log(error))
     }, []);
 

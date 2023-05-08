@@ -20,7 +20,7 @@ const ItemList = (props) => {
             <ul className="list-group">
                 {posts.map((post, index) => (
                     <li key={index} className="list-group-item"> 
-                    <Link to={`/edit/${post.userId}`}>  <h4>Post {index+1}</h4></Link>
+                    <Link to={`/edit/${post.id}`}><h4>Post {index+1}</h4></Link>
                         <p>User Id: {post.userId}</p>
                         <p>Id: {post.id}</p>
                         <p>Title: {post.title}</p>
