@@ -29,7 +29,7 @@ const CreateItem = (props) => {
 
     return (
         <>
-            <div class="row">
+            <div className="row">
                 <div className="mx-auto col-20 col-md-10 col-lg-7">
                     <h1>Create a new post</h1>
                     <form onSubmit={AddPost} >

@@ -9,7 +9,7 @@ const EditItem = (props) => {
     const [body, setBody] = useState("")
     const navigate = useNavigate()
     const {id} = useParams()
-    const {setEditPost} = props
+
     useEffect(()=>{
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
     .then(response => {setUserId(response.data.id) ;setTitle(response.data.title);
@@ -31,8 +31,7 @@ const EditItem = (props) => {
         axios.put(`https://jsonplaceholder.typicode.com/posts/${editedPost.id}`, editedPost)
         .then(response => {
             console.log(response.data)
-            navigate('/')
-            setEditPost(editedPost)})
+            navigate('/')})
         .catch(error => console.log(error))
     }
     const DeletePost = (e) => {
@@ -48,8 +47,7 @@ const EditItem = (props) => {
         axios.delete(`https://jsonplaceholder.typicode.com/posts/${editedPost.id}`)
         .then(response => {
             console.log(response.data)
-            navigate('/')
-            setEditPost(editedPost)})
+            navigate('/')})
         .catch(error => console.log(error))
     }
 
